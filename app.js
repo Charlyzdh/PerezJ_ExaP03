@@ -2,19 +2,18 @@ require('dotenv').config()
 var express = require('express')
 var bodyParser = require('body-parser')
 var app = express()
+var user = require('./models/user').User
 var mongoose = require('mongoose')
 var Schema = mongoose.Schema;
 
+mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONGO_CONNECTION);
+
 
 var userSchemaJSON = {
     email: String,
-    comment: String
+    password: String
 };
-
-var user_schema = new Schema(userSchemaJSON);
-
-var User = mongoose.model('User', user_schema);
 
 app.use('/public', express.static('public'));
 
@@ -29,13 +28,16 @@ app.get('/', function (req, res) {
 })
 
 app.get('/login', function (req, res) {
+    user.find(function(err,doc){
+        console.log(doc)
+    })
     res.render('login');
 });
 
 app.post("/users", function(req, res){
     var user = new User({
         email: req.body.email,
-        comment: req.body.comment
+        password: req.body.password
     })
 
     user.save(function(){
@@ -43,5 +45,6 @@ app.post("/users", function(req, res){
     })
 })
 
+console.log('Listening on port 8080')
+
 app.listen(8080);
-console.log('listening on http://localhost:8080')
