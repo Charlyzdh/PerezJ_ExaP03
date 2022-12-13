@@ -59,10 +59,13 @@ app.post("/sessions", function(req, res){
         email: req.body.email, password : req.body.password
     },function(err, user){
         if(err){
-            console.log(err);
+            res.redirect('/login');
         }
-        req.session.user_id = user._id;
-        res.redirect('/app');
+        if(req.session.user_id){
+            alert('Wrong username or password'); 
+        }else{
+            res.redirect('/app');
+        }
     })
 })
 
