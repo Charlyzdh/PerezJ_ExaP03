@@ -1,19 +1,8 @@
-require('dotenv').config()
 var express = require('express')
 var bodyParser = require('body-parser')
+var User = require('./models/user').User
 var app = express()
-var user = require('./models/user').User
-var mongoose = require('mongoose')
-var Schema = mongoose.Schema;
 
-mongoose.set('strictQuery', true);
-mongoose.connect(process.env.MONGO_CONNECTION);
-
-
-var userSchemaJSON = {
-    email: String,
-    password: String
-};
 
 app.use('/public', express.static('public'));
 
@@ -27,21 +16,44 @@ app.get('/', function (req, res) {
     res.render('index');
 })
 
-app.get('/login', function (req, res) {
-    user.find(function(err,doc){
+app.get('/signup', function (req, res) {
+    User.find(function(err,doc){
         console.log(doc)
     })
+    res.render('signup');
+});
+
+app.get('/login', function (req, res) {
     res.render('login');
 });
 
 app.post("/users", function(req, res){
     var user = new User({
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        password_confirmation: req.body.password_confirmation,
+        username: req.body.username
     })
-
-    user.save(function(){
+    console.log(user.password_confirmation)
+    user.save().then(function(us){
         res.send('Recibimos tu información!')
+    }),function(err){
+        if(err){
+            console.log(err);
+            res.send('No pudimos guardar la información')
+        }
+    }
+})
+
+app.post("/sessions", function(req, res){
+    User.findOne({
+        email: req.body.email, password : req.body.password
+    },function(err, docs){
+        if(err){
+            console.log(err);
+        }
+        console.log(docs);
+        res.send('Hello world!');
     })
 })
 
