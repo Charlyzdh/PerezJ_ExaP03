@@ -1,5 +1,9 @@
-extends ./layout
+extends ./login_layout
 block content
-    h1 Welcome to my final project 
-    a(href="/login") Login
-    a(href="/signup") Sign up
+    main#mainBody
+        section#loginForm
+            h1 Proyecto Final
+            h2 Administración Web
+            h3 Juan Carlos Pérez
+            a#subButton(href="/login") Login
+            a#subButton(href="/signup") Sign up

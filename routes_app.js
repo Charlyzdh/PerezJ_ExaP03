@@ -29,7 +29,13 @@ router.route('/imgs/:id')
 
 router.route('/imgs')
 .get(function(req, res){
-
+    Img.find({}, function(err,img){
+        if(err){
+            res.redirect('/app')
+            return
+        }
+        res.render('app/imgs/index',{img: img})
+    })
 }).post(function(req, res){
     var data = {
         title: req.body.title

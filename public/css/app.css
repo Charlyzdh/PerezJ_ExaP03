@@ -1,4 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap'); /*API de fuentes de google fonts*/
+
 body{
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
+
+#logo{
+    width: 60%;
+}
+
+#logo img{
+    width: 11%;
+}
+
+.nav_links{
+    width: 30%;
+}
+
+nav ul{
+    list-style: none; /*Eliminamos los puntos, numeros o letras posibles en la lista*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-top: .7vw; /*vw = viewport width el cual varia dependiendo el dispositivo*/
+    width: 90%;
+}
+
+nav li{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+nav a{
+    text-decoration: none;
+    color: #0c3a80;
+    text-decoration: underline 2px #fff;
+}
+
+nav a:hover{/*Pseudoclase de efecto por mouse encima*/
+    color: #4976b8;
+    cursor: pointer;
+    text-decoration: underline 2px #4976b8;
+    transition: .7s ease-in-out;
+}
+
+nav{
+    width: 100%;
+    top: 0;
+    position: fixed;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10; /*Posicion con respecto a z (capa) la cual indica que será hasta arriba ya que si no se define z-index en los elementos, se define por defecto en 1*/
+    box-shadow: 0 1px 12px #000;
+}
+
+#page1{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+@keyframes bgMove { /*Keyframe para el movimiento del fondo del login page*/
+    100%{
+        background-position: 15% 50%;
+    }
+}
+
+#mainBody{
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../../public/img/bg.svg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    animation: bgMove 6s infinite alternate linear; /*Asignamos animacion al cuerpo principal del login*/
+    display: flex;
+    justify-content: center; /*Centramos contenido con respecto a la forma de mostrar (como no contiene flex-direction) por defecto lo muestra como fila*/
+    align-items: center; /*Alineacion vertical por defecto (dependiendo del tipo de direccion flex que se le de*/
+}
+
+#loginForm{
+    background-color: aliceblue;
+    width: 30%;
+    height: 50%;
+    border-radius: 30px;
+    box-shadow: 0 3px 12px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#loginForm h1{ /*Propiedades para todos los h1 contenidos en elementos con id loginForm*/
+    font-size: 3.5rem;
+}
+
+#loginForm h3{ /*Propiedades para todos los h3 contenidos en elementos con id loginForm*/
+    color: rgb(131, 131, 131);
+    font-size: 1.5rem;
+}
+
+#subButton{ /*Propiedades para boton con id subButton*/
+    background-color: #0D6EFD;
+    border: none;
+    width: 60%;
+    height: 2.5em;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5em;
+    border-radius: 15px;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#subButton:hover{
+    background-color: #1154b8;
+    cursor: pointer;
+}
+
+#loginBody{
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('../../public/img/bg.svg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    animation: bgMove 6s infinite alternate linear; /*Asignamos animacion al cuerpo principal del login*/
+    display: flex;
+    justify-content: center; /*Centramos contenido con respecto a la forma de mostrar (como no contiene flex-direction) por defecto lo muestra como fila*/
+    align-items: center; /*Alineacion vertical por defecto (dependiendo del tipo de direccion flex que se le de*/
+}
+
+#login{
+    background-color: aliceblue;
+    width: 30%;
+    height: 60%;
+    border-radius: 30px;
+    box-shadow: 0 3px 12px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#login h1{ /*Propiedades para todos los h1 contenidos en elementos con id login*/
+    font-size: 3.5rem;
+}
+
+#login h3{ /*Propiedades para todos los h3 contenidos en elementos con id login*/
+    color: rgb(131, 131, 131);
+    font-size: 1.5rem;
+}
+
+.form-control{
+    width: 160%;
+    margin-left: -30%;
+}
+
+.form-label{
+    margin-left: -30%;
+}
+
+.btn,.btn-primary{
+    width: 100%;
+}
+
+
