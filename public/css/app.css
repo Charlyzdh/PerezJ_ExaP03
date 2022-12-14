@@ -177,3 +177,9 @@ nav{
     background-color: #99bcf1;
 }
 
+form.link input[type="submit"]{
+    background: transparent;
+    border: none;
+    display: inline-block;
+    color: rgb(180, 35, 35);
+}

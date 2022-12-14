@@ -36,7 +36,14 @@ router.route('/imgs/:id')
         })
     })
 }).delete(function(req, res){
-
+    Img.findOneAndDelete({_id: req.params.id},function(err){
+        if(!err){
+            res.redirect('/app/imgs')
+        }else{
+            console.log(err)
+            res.redirect('/app/imgs'+req.params.id)
+        }
+    })
 });
 
 router.route('/imgs')
