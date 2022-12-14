@@ -223,7 +223,7 @@ form.link input[type="submit"]{
     grid-column: 5/18; /*Posicionamiento dentro de los 32 fragmentos, primer numero muestra el inicio, segundo el final y la resta de ambos, el tamaño que cubre*/
     grid-row: 5/16; /*Posicionamiento dentro de los 32 fragmentos, primer numero muestra el inicio, segundo el final y la resta de ambos, el tamaño que cubre*/
     background-color: #000;
-    background-image: url('img/desk.jpg');
+    background-image: url('../../public/img/desk.jpg');
     background-size: cover;
 }
 
@@ -231,7 +231,7 @@ form.link input[type="submit"]{
     grid-column: 19/32; /*Posicionamiento dentro de los 32 fragmentos, primer numero muestra el inicio, segundo el final y la resta de ambos, el tamaño que cubre*/
     grid-row: 5/16; /*Posicionamiento dentro de los 32 fragmentos, primer numero muestra el inicio, segundo el final y la resta de ambos, el tamaño que cubre*/
     background-color: #000;
-    background-image: url('img/bed.jpg');
+    background-image: url('../../public/img/bed.jpg');
     background-size: cover;
 }
 
@@ -239,7 +239,7 @@ form.link input[type="submit"]{
     grid-column: 5/18; /*Posicionamiento dentro de los 32 fragmentos, primer numero muestra el inicio, segundo el final y la resta de ambos, el tamaño que cubre*/
     grid-row: 17/32; /*Posicionamiento dentro de los 32 fragmentos, primer numero muestra el inicio, segundo el final y la resta de ambos, el tamaño que cubre*/
     background-color: #000;
-    background-image: url('img/Picture3.jpg');
+    background-image: url('../../public/img/Picture3.jpg');
     background-size: cover;
 }
 
@@ -247,7 +247,7 @@ form.link input[type="submit"]{
     grid-column: 19/32; /*Posicionamiento dentro de los 32 fragmentos, primer numero muestra el inicio, segundo el final y la resta de ambos, el tamaño que cubre*/
     grid-row: 17/24; /*Posicionamiento dentro de los 32 fragmentos, primer numero muestra el inicio, segundo el final y la resta de ambos, el tamaño que cubre*/
     background-color: #000;
-    background-image: url('img/empty\ house.jpg');
+    background-image: url('../../public/img/empty\ house.jpg');
     background-size: cover;
 }
 
@@ -255,6 +255,6 @@ form.link input[type="submit"]{
     grid-column: 19/32; /*Posicionamiento dentro de los 32 fragmentos, primer numero muestra el inicio, segundo el final y la resta de ambos, el tamaño que cubre*/
     grid-row: 25/32; /*Posicionamiento dentro de los 32 fragmentos, primer numero muestra el inicio, segundo el final y la resta de ambos, el tamaño que cubre*/
     background-color: #000;
-    background-image: url('img/living\ and\ dinning\ room.jpg');
+    background-image: url('../../public/img/living\ and\ dinning\ room.jpg');
     background-size: cover;
 }
