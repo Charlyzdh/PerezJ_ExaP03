@@ -1,3 +1,12 @@
 extends ../../layout
 block content
-    h1 Images
+    div.container
+        h1 Image Repository </br>
+        for imagen in img
+            .white.border.tr.large-padding
+                .row
+                    .col-md-10
+                        h2=imagen.title
+                    .col-md-2
+                        a.px-2(href="/app/imgs/#{imagen._id}/edit") Edit  
+                        a(href="/app/imgs/#{imagen._id}/") Delete

@@ -5,12 +5,18 @@ var cookieSession = require('cookie-session')
 var router_app = require('./routes_app')
 var session_middleware = require('./middlewares/session')
 
+var methodOverride = require('method-override')
 
-var app = express()
+
+var app = express();
+
 
 app.use('/public', express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
+app.use(methodOverride('_method'))
+
 app.use(cookieSession({
     name: 'session',
     keys: ['session-1', 'session-2']
@@ -61,11 +67,8 @@ app.post("/sessions", function(req, res){
         if(err){
             res.redirect('/login');
         }
-        if(req.session.user_id){
-            alert('Wrong username or password'); 
-        }else{
-            res.redirect('/app');
-        }
+        req.session.user_id = user._id;
+        res.redirect('/app');
     })
 })
 

@@ -12,7 +12,10 @@ router.get('/imgs/new', function(req, res){
     res.render('app/imgs/new')
 })
 
-router.get('imgs/:id/edit', function(req, res){
+router.get('/imgs/:id/edit', function(req, res){
+    Img.findById(req.params.id, function(err,img){
+        res.render('app/imgs/edit',{img: img})
+    })
 
 })
 
@@ -22,7 +25,16 @@ router.route('/imgs/:id')
         res.render('app/imgs/show',{img: img})
     })
 }).put(function(req, res){
-
+    Img.findById(req.params.id, function(err,img){
+        img.title = req.body.title;
+        img.save(function(err){
+            if(!err){
+                res.render('app/imgs/show',{img: img})
+            }else{
+                res.render('app/imgs/'+img.id+'/edit',{img: img})
+            }
+        })
+    })
 }).delete(function(req, res){
 
 });

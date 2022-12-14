@@ -1,13 +1,13 @@
 extends ../../layout
 block content
     h1 Upload Image
-    form(action="/app/imgs", method="POST")
-        div.form-group
-            label(for='email') Title
-            input.form-control(type='text', name='title', placeholder='Img title', required, id="title")
-        div
-            label(for="password") File
-            input.form-control(type='file', name='file', id="file")
+        form.container(action="/app/imgs", method="POST")
+            div.form-group </br>
+                label(for='title') Title
+                input.form-control(type='text', name='title', placeholder='Img title', required, id="title")
+            div </br>
+                label(for="file") File
+                input.form-control(type='file', name='file', id="file")
 
-        div
-            input.btn.btn-info(type='submit', value='Upload')
+            div </br>
+                input.btn.btn-primary(type='submit', value='Upload')

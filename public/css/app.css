@@ -173,3 +173,7 @@ nav{
 }
 
 
+.tr:nth-of-type(even){
+    background-color: #99bcf1;
+}
+
