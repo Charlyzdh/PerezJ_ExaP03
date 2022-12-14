@@ -42,6 +42,10 @@ app.get('/login', function (req, res) {
     res.render('login');
 });
 
+app.get('/app/contact', function (req, res) {
+    res.render('app/contact');
+});
+
 app.post("/users", function(req, res){
     var user = new User({
         email: req.body.email,
@@ -51,7 +55,7 @@ app.post("/users", function(req, res){
     })
     console.log(user.password_confirmation)
     user.save().then(function(us){
-        res.send('Recibimos tu información!')
+        res.redirect('/')
     }),function(err){
         if(err){
             console.log(err);
