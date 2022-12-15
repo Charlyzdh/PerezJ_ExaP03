@@ -1,0 +1,11 @@
+extends ../layout
+block content
+    main#catalogo
+        #catInfo
+        h2 Catálogo </br> </br>
+            img#cat1(src="../../public/img/bed.jpg", alt="", onclick='catChange(this)')
+            img#cat2(src="../../public/img/Picture3.jpg", alt="", onclick='catChange(this)')
+            img#cat3(src="../../public/img/empty\ house.jpg", alt="", onclick='catChange(this)')
+            img#cat4(src="../../public/img/desk.jpg", alt="", onclick='catChange(this)')
+        #catDetails
+            h2#catText Selecciona un producto

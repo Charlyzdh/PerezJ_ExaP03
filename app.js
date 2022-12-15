@@ -46,6 +46,10 @@ app.get('/app/contact', function (req, res) {
     res.render('app/contact');
 });
 
+app.get('/app/catalog', function (req, res) {
+    res.render('app/catalog');
+});
+
 app.post("/users", function(req, res){
     var user = new User({
         email: req.body.email,

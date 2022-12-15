@@ -5,6 +5,7 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="../../public/css/app.css")
+        script(src="../main.js") 
         title Final Web JCPH
     body
         nav.navbar
@@ -15,12 +16,12 @@ html(lang="en")
                     li
                         a(href="/app") Inicio
                     li
-                        a(href="") Catalogo
+                        a(href="/app/catalog") Catalogo
                     li
                         a(href="/app/imgs") Opiniones
                     li
                         a(href="/app/contact") Contacto
-        div#page1 
+        div
             block content
         
         section#footerSection
