@@ -187,7 +187,7 @@ form.link input[type="submit"]{
 }
 
 #catDetails{
-    width: 30%;
+    width: 100%;
 }
 
 #catInfo h2{
@@ -298,3 +298,6 @@ form.link input[type="submit"]{
     font-size: .8em;
     color: rgb(116, 116, 116);
 }
+
+
+
