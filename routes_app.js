@@ -27,6 +27,7 @@ router.route('/imgs/:id')
 }).put(function(req, res){
     Img.findById(req.params.id, function(err,img){
         img.title = req.body.title;
+        img.comment = req.body.comment;
         img.save(function(err){
             if(!err){
                 res.render('app/imgs/show',{img: img})
@@ -57,16 +58,17 @@ router.route('/imgs')
     })
 }).post(function(req, res){
     var data = {
-        title: req.body.title
+        title: req.body.title,
+        comment: req.body.comment
     }
 
     var img = new Img(data)
 
     img.save(function(err){
         if(!err){
-            res.redirect('/app/imgs/'+img._id)
+            res.redirect('/app/imgs/')
         }else{
-            res.render(err)
+            console.log(err)
         }
     })
 });

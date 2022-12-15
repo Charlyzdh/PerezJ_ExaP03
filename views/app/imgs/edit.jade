@@ -1,11 +1,14 @@
 extends ../../layout
 block content
     div.col-md.6.remove-float.center-block.big-top-space
-        h1 Upload new image
+        h1 Cambiaste de opinion?
             form(action="/app/imgs/#{img.id}?_method=PUT", method="POST")
                 div.form-group.add-float.center-block
-                    label(for="title") Title
+                    label(for="title") Titulo
                     input(type="text", name="title", placeholder="Image Title", id="title", value="#{img.title}")
+                div.form-group.add-float.center-block
+                    label(for="comment") Comentario
+                    input(type='text', name='comment', id="comment", required, value="#{img.comment}")
                 div.row.top-space
                     div.col-xs-12.col-sm-6
                         input.btn.btn-primary(type="submit", value="Save")

@@ -255,8 +255,8 @@ form.link input[type="submit"]{
 
 #home{
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(102, 154, 250, 0.2),rgba(182, 141, 247, 0.2)), url('../img/spacebg.jpg');
+    height: 91.5vh;
+    background-image: linear-gradient(rgba(36, 41, 49, 0.5),rgba(0, 0, 0, 0.3)), url('../img/awards.png');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -291,12 +291,129 @@ form.link input[type="submit"]{
 
 .degree{
     font-size: 1.2em;
-    color: rgb(163, 163, 163);
+    color: rgb(199, 199, 199);
 }
 
 .examen{
     font-size: .8em;
-    color: rgb(116, 116, 116);
+    color: rgb(255, 255, 255);
+}
+
+.mainContent{
+    display: flex;
+    justify-content: space-between;
+    height: 92vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    background: url('../img/wave-haikei\ \(1\).svg');
+    background-size: cover;
+}
+
+.mainContent h1{
+    font-weight: 600;
+}
+
+#commentsForm,#commentsDesc{
+    width: 45%;
+}
+
+#commentsForm{
+    border: 1px solid rgb(116, 116, 116);
+    border-radius: 20px;
+    padding: 1vw;
+    height: 50%;
+    background-color: #fff;
+    box-shadow: 0 3px 5px black;
+}
+
+#commentsForm input{
+    width: 100%;
+}
+
+#comment{
+    height: 100px;
+}
+
+.containerOp{
+    width: 90%;
+    margin: 10vw 5vw;
+}
+
+.containerOp h2{
+    margin-left: 2%;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.containerOp p{
+    margin-left: 2%;
+    color: #000000;
+}
+
+.opTitle{
+    background-color: #85673f;
+    border-radius: 20px;
+    margin-top: 2vw;
+    box-shadow: 0 2px 6px black;
+}
+
+.opControls{
+    margin-right: 2%;
+}
+
+.opContent{
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerTitle{
+    width: 90%;
+    display: flex;
+    align-items: center;
+}
+
+.headerTitle img{
+    width: 30px;
+}
+
+.headerTitle img:hover{
+    transform: scale(1.05);
+}
+
+#contactPage{
+    display: flex;
+    justify-content: space-between;
+    height: 92.5vh;
+    align-items: center;
+    background-image: url('../img/wave-haikei\ \(1\).svg');
+}
+
+#conInfo,#mapFrame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#conInfo{
+    width: 50%;
+    height: 60%;
+}
+
+#mapFrame{
+    width: 50%;
+    height: 60%;
+}
+
+#mapFrame iframe{
+    width: 70%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 3px 5px black;
 }
 
 
