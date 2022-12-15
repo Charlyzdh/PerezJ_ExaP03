@@ -409,7 +409,7 @@ form.link input[type="submit"]{
     height: 60%;
 }
 
-#mapFrame iframe{
+iframe{
     width: 70%;
     height: 100%;
     border-radius: 20px;
